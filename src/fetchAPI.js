@@ -1,5 +1,5 @@
 function testApi(){
-    console.log(`hello from the api.js file`)
+    console.log(`shitsnack fuckery from the api.js file`)
 
 }
 
