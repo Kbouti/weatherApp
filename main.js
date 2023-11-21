@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("test"),console.log("hello from the api.js file")})();
+(()=>{"use strict";console.log("test"),console.log("shitsnacks from the api.js file")})();
