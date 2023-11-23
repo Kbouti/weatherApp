@@ -8,4 +8,4 @@ import {
 } from './fetchAPI.js'
 
 testApi()
-fetchAPI()
+fetchAPI(`tacoma`);
