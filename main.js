@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("test"),console.log("shitsnack fuckery from the api.js file"),console.log("even more shit fuckery")})();
+(()=>{"use strict";console.log("test"),console.log("shitsnack fuckery from the api.js file"),console.log("even more shit fuckery"),async function(){const o=await fetch("https://api.weatherapi.com/v1/current.json?key=d261db3fd8fb4676bde201850231611&q=tacoma");console.log(o),o.json().then((function(o){console.log(o)}))}()})();
