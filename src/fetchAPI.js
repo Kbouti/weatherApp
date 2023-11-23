@@ -14,6 +14,16 @@ function testApi() {
 // https://api.weatherapi.com/v1/current.json?key=d261db3fd8fb4676bde201850231611&q=tacoma
 
 
+async function fetchAPI(){
+  const response = await fetch('https://api.weatherapi.com/v1/current.json?key=d261db3fd8fb4676bde201850231611&q=tacoma')
 
+  console.log(response)
+  response.json().then(function(response){
+    console.log(response)
+  })
 
-export { testApi };
+}
+
+export { testApi,
+fetchAPI
+};
