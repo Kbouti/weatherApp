@@ -7,10 +7,10 @@ import {
     fetchAPI
 } from './fetchAPI.js';
 
-// import {
-//     addListener
-// } from `./form.js`
-// addListener();
+import {
+    addListener
+} from './form.js'
+addListener();
 
 testApi()
 fetchAPI(`tacoma`);
