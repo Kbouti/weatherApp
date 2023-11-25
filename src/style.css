@@ -31,3 +31,8 @@ body {
   border:solid var(--color4) 2px;
 }
 
+#cityInput {
+    border-radius: 10px;
+    padding: 2px;
+    background-color: #ffb703;
+}
