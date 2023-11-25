@@ -2,12 +2,18 @@ function addListener() {
   const form = document.getElementById(`form`);
 
   form.addEventListener(`submit`, (e) => {
-    e.preventDefault;
+    e.preventDefault();
+
+    let cityInput = document.getElementById(`cityInput`);
+
+    let userInput = cityInput.value;
+
     console.log(`form submitted`);
+    console.log(userInput);
+
     alert(`You submitted the form`);
-    return;
+    return userInput;
   });
-  // This isn't working yet
 }
 
 export { addListener };
