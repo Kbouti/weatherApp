@@ -44,7 +44,14 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #055982;
+}
 
-button:hover{
-    background-color: #055982
+.farenheit {
+  border-color: var(--color4);
+}
+
+.celcius {
+  border-color: var(--color5);
 }
