@@ -18,6 +18,11 @@ function addListener() {
     alert(`You submitted the form`);
     return userInput;
   });
+
+unitButton.addEventListener(`click`, function(){
+    toggleUnits()});
+
+
 }
 
 function toggleUnits(){
@@ -25,8 +30,10 @@ function toggleUnits(){
         unitButton.classList.remove(`farenheit`);
         unitButton.classList.add(`celcius`);
         unitButton.innerHTML = `&#8451;`
+        console.log(`toggle triggered`);
         return;
     } else {
+        console.log(`toggle triggered`);
         unitButton.classList.remove(`celcius`);
         unitButton.classList.add(`farenheit`);
         unitButton.innerHTML = `&#8457;`
