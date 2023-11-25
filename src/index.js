@@ -5,7 +5,13 @@ console.log(`test`)
 import {
     testApi,
     fetchAPI
-} from './fetchAPI.js'
+} from './fetchAPI.js';
+
+import {
+    addListener
+} from `./form.js`
+
 
 testApi()
 fetchAPI(`tacoma`);
+addListener();
