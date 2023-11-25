@@ -8,9 +8,9 @@ import {
 } from './fetchAPI.js';
 
 import {
-    addListener
+    addFormListeners
 } from './form.js'
-addListener();
 
+addFormListeners();
 testApi()
 fetchAPI(`tacoma`);

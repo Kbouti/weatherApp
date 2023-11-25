@@ -4,7 +4,7 @@ const form = document.getElementById(`form`);
 const unitButton = document.getElementById(`unitButton`)
 
 
-function addListener() {
+function addFormListeners() {
   form.addEventListener(`submit`, (e) => {
     e.preventDefault();
 
@@ -41,4 +41,4 @@ function toggleUnits(){
     }
 }
 
-export { addListener };
+export { addFormListeners };
