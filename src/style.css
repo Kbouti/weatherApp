@@ -25,6 +25,9 @@ body {
 
 
 
-.form {
-  display: flex;
+#form {
+    display:flex;
+    flex-direction:column;
+  border:solid var(--color4) 2px;
 }
+
