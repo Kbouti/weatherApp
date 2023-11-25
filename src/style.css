@@ -11,8 +11,17 @@ body {
   background-color: var(--color1);
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding:0;
 }
 
+
+.header{
+    background-color: var(--color3);
+    color:var(--color2);
+    display:flex;
+    justify-content: center;
+}
 
 
 
