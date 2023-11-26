@@ -1,8 +1,13 @@
-const form = document.getElementById(`form`);
+import { fetchAPI } from "./fetchAPI";
 
+const form = document.getElementById(`form`);
 const unitButton = document.getElementById(`unitButton`);
 const cityInput = document.getElementById(`cityInput`);
 
+
+function testForm(){
+    console.log(`form.js has loaded`)
+}
 function addFormListeners() {
   form.addEventListener(`submit`, (e) => {
     formSubmit(e);
@@ -24,7 +29,9 @@ function formSubmit(e) {
   getWeather(userInput);
 }
 
-function getWeather(city) {}
+function getWeather(city) {
+    fetchAPI(city);
+}
 
 function toggleUnits() {
   if (unitButton.classList.contains(`farenheit`)) {
@@ -42,4 +49,7 @@ function toggleUnits() {
   }
 }
 
-export { addFormListeners };
+export { 
+    testForm,
+    addFormListeners
+ };
