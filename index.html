@@ -8,9 +8,11 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+    
     <div class="header">
       <h1>Weather App</h1>
     </div>
+
     <form id="form">
       <input
         type="text"
@@ -19,9 +21,18 @@
         autocomplete="off"
         placeholder="Enter a City"
       />
-
-      <button type="button" id="unitButton" class="unitsToggle farenheit">&#8457;</button>
+      <button type="button" id="unitButton" class="unitsToggle farenheit">
+        &#8457;
+      </button>
       <button type="submit">Submit</button>
     </form>
+
+    <div id="weatherBoard">
+      <h2 id="cityName"></h2>
+      <div id="currentTemp"></div>
+      <div id="precipitation"></div>
+      <div id="windConditions"></div>
+    </div>
+
   </body>
 </html>
