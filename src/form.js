@@ -7,6 +7,7 @@ const cityInput = document.getElementById(`cityInput`);
 function testForm() {
   console.log(`form.js has loaded`);
 }
+
 function addFormListeners() {
   form.addEventListener(`submit`, (e) => {
     formSubmit(e);
@@ -16,20 +17,17 @@ function addFormListeners() {
   });
 }
 
-function getUserInput() {
-  let userInput = cityInput.value;
-  console.log(userInput);
-  return userInput;
-}
 
 // ***************************************************************************************************************************************
 // Not sure if this needs to be an asyn function - prolly not. FetchAPI is asyn.
 async function formSubmit(e) {
   e.preventDefault();
-  let userInput = getUserInput();
-  let response = fetchAPI(userInput);
-  console.log(`response from ${userInput} in formSubmit function:`);
-  console.log(response);
+  let userInput = cityInput.value;
+  let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=d261db3fd8fb4676bde201850231611&q=${userInput}`, {mode: 'cors'})
+  response.json().then(function(response){
+    console.log(`response from ${userInput} in formSubmit function:`);
+    console.log(response);
+  });
 }
 // The problem exists here in this function. Our async fetchAPI function is properly handling the promise to get a response from the API.
 // This function calls the fetchAPI function, then immedietely console.logs response -- which is still an empty promise at this point
