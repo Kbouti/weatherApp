@@ -31,7 +31,7 @@ async function formSubmit(e) {
   console.log(`response from ${userInput} in formSubmit function:`);
   console.log(response);
 }
-// The problem exists here in this function. Out async fetchAPI function is properly handling the promise to get a response from the API.
+// The problem exists here in this function. Our async fetchAPI function is properly handling the promise to get a response from the API.
 // This function calls the fetchAPI function, then immedietely console.logs response -- which is still an empty promise at this point
 // ***************************************************************************************************************************************
 
