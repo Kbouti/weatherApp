@@ -55,3 +55,14 @@ button:hover {
 .celcius {
   border-color: var(--color5);
 }
+
+#weatherBoard {
+    align-self:center;
+    border: 2px solid var(--color3);
+    border-radius:10px;
+    width: 60vw;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
