@@ -1,4 +1,5 @@
 import { fetchAPI } from "./fetchAPI";
+import { updateBoard } from "./domManipulation";
 
 const form = document.getElementById(`form`);
 const unitButton = document.getElementById(`unitButton`);
@@ -25,8 +26,11 @@ async function formSubmit(e) {
   response.json().then(function(response){
     console.log(`response from ${userInput} in formSubmit function:`);
     console.log(response);
-    let temp = response.current.temp_f
-    console.log(`The current temperature in ${userInput} is ${temp} degrees farenheit`);
+    let tempF = response.current.temp_f
+    console.log(`The current temperature in ${userInput} is ${tempF} degrees farenheit`);
+
+    let text = response.current.condition.text;
+    console.log(`conditions are: ${text}`);
   });
 }
 
