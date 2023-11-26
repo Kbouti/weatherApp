@@ -18,8 +18,6 @@ function addFormListeners() {
 }
 
 
-// ***************************************************************************************************************************************
-// Not sure if this needs to be an asyn function - prolly not. FetchAPI is asyn.
 async function formSubmit(e) {
   e.preventDefault();
   let userInput = cityInput.value;
@@ -27,11 +25,15 @@ async function formSubmit(e) {
   response.json().then(function(response){
     console.log(`response from ${userInput} in formSubmit function:`);
     console.log(response);
+    let temp = response.current.temp_f
+    console.log(`The current temperature in ${userInput} is ${temp} degrees farenheit`);
   });
 }
-// The problem exists here in this function. Our async fetchAPI function is properly handling the promise to get a response from the API.
-// This function calls the fetchAPI function, then immedietely console.logs response -- which is still an empty promise at this point
+
 // ***************************************************************************************************************************************
+// Ok, now we've accessed the data. Now we need to do something with it. 
+// ***************************************************************************************************************************************
+
 
 function toggleUnits() {
   if (unitButton.classList.contains(`farenheit`)) {
