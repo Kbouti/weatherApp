@@ -4,9 +4,8 @@ const form = document.getElementById(`form`);
 const unitButton = document.getElementById(`unitButton`);
 const cityInput = document.getElementById(`cityInput`);
 
-
-function testForm(){
-    console.log(`form.js has loaded`)
+function testForm() {
+  console.log(`form.js has loaded`);
 }
 function addFormListeners() {
   form.addEventListener(`submit`, (e) => {
@@ -23,15 +22,18 @@ function getUserInput() {
   return userInput;
 }
 
-function formSubmit(e) {
+// ***************************************************************************************************************************************
+// Not sure if this needs to be an asyn function - prolly not. FetchAPI is asyn.
+async function formSubmit(e) {
   e.preventDefault();
   let userInput = getUserInput();
-  getWeather(userInput);
+  let response = fetchAPI(userInput);
+  console.log(`response from ${userInput} in formSubmit function:`);
+  console.log(response);
 }
-
-function getWeather(city) {
-    fetchAPI(city);
-}
+// The problem exists here in this function. Out async fetchAPI function is properly handling the promise to get a response from the API.
+// This function calls the fetchAPI function, then immedietely console.logs response -- which is still an empty promise at this point
+// ***************************************************************************************************************************************
 
 function toggleUnits() {
   if (unitButton.classList.contains(`farenheit`)) {
@@ -49,7 +51,4 @@ function toggleUnits() {
   }
 }
 
-export { 
-    testForm,
-    addFormListeners
- };
+export { testForm, addFormListeners };

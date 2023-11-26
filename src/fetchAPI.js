@@ -14,13 +14,14 @@ console.log(`fetchAPI.js has loaded`)
 
 
 async function fetchAPI(city){
+  console.log(`fetchAPI function is requesting data for ${city}.`)
   const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=d261db3fd8fb4676bde201850231611&q=${city}`)
-
-  console.log(response)
+  console.log(`fetchAPI function  has awaited a response for ${city}.`)
   response.json().then(function(response){
-    console.log(response)
+    console.log(`fetchAPI function has parsed a response for ${city}. the response is:`);
+    console.log(response);
+    return response
   })
-
 }
 
 export { testApi,
