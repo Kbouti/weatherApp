@@ -36,6 +36,8 @@ async function formSubmit(e) {
 
 // ***************************************************************************************************************************************
 // Ok, now we've accessed the data. Now we need to do something with it. 
+// Get all the values we need and store them in an object, return the object. Then perform dom manipulation with object. 
+// Handle Errors... 
 // ***************************************************************************************************************************************
 
 
