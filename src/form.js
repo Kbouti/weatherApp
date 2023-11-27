@@ -26,11 +26,20 @@ async function formSubmit(e) {
   response.json().then(function(response){
     console.log(`response from ${userInput} in formSubmit function:`);
     console.log(response);
-    let tempF = response.current.temp_f
-    console.log(`The current temperature in ${userInput} is ${tempF} degrees farenheit`);
+    
+    let location = response.location.name;
+    let region = response.location.region;
+    let country = response.location.country;
+    let tempF = response.current.temp_f;
+    let tempC = response.current.temp_c;
+    let conditions = response.current.condition.text;
 
-    let text = response.current.condition.text;
-    console.log(`conditions are: ${text}`);
+    console.log(location);
+    console.log(region);
+    console.log(country);
+    console.log(tempF);
+    console.log(tempC);
+    console.log(conditions);
   });
 }
 
