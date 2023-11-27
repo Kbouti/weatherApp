@@ -48,7 +48,7 @@ async function formSubmit(e) {
     let responseArray = [location, region, country, conditions, tempF, tempC, windMPH, windKPH];
    
     //Now we want to manipulate the Dom with the responseArray
-
+updateBoard(responseArray);
 
   });
 }

@@ -1,16 +1,21 @@
 const cityName = document.getElementById(`cityName`);
 const currentTemp = document.getElementById(`currentTemp`);
-const precipitation = document.getElementById(`precipitation`);
-const windConditions = document.getElementById(`windConditions`);
-
+const conditions = document.getElementById(`conditions`);
+const wind = document.getElementById(`wind`);
+const region = document.getElementById(`region`);
+const country = document.getElementById(`country`);
 
 // location, region, country, conditions, tempF, tempC, windMPH, windKPH
 
 function updateBoard(array) {
-  cityName.innerHTML = city;
+  cityName.innerHTML = array[0];
+  region.innerHTML = array[1] + "," + " ";
+  country.innerHTML = array[2];
+  conditions.innerHTML = array[3];
+
   currentTemp.innerHTML = temp;
   precipitation.innerHTML = rain;
-  windConditions.innerHTML = wind;
+  wind.innerHTML = wind;
 }
 
-export {updateBoard}
+export { updateBoard };
