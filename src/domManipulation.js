@@ -3,7 +3,10 @@ const currentTemp = document.getElementById(`currentTemp`);
 const precipitation = document.getElementById(`precipitation`);
 const windConditions = document.getElementById(`windConditions`);
 
-function updateBoard(city, units, temp, rain, wind) {
+
+// location, region, country, conditions, tempF, tempC, windMPH, windKPH
+
+function updateBoard(array) {
   cityName.innerHTML = city;
   currentTemp.innerHTML = temp;
   precipitation.innerHTML = rain;
