@@ -40,6 +40,12 @@ async function formSubmit(e) {
     console.log(tempF);
     console.log(tempC);
     console.log(conditions);
+
+    let responseArray = [location, region, country, tempF, tempC, conditions];
+   
+    //Now we want to manipulate the Dom with the responseArray
+
+
   });
 }
 
