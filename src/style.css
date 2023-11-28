@@ -71,3 +71,7 @@ button:hover {
     display:flex;
     flex-direction: row;
 }
+
+#region{
+    margin-right:4px;
+}
