@@ -37,15 +37,6 @@ async function formSubmit(e) {
     let windMPH = response.current.wind_mph;
     let windKPH = response.current.wind_kph;
 
-    console.log(location);
-    console.log(region);
-    console.log(country);
-    console.log(tempF);
-    console.log(tempC);
-    console.log(conditions);
-    console.log(windMPH);
-    console.log(windKPH);
-
     let responseArray = [location, region, country, conditions, tempF, tempC, windMPH, windKPH];
    
     //Now we want to manipulate the Dom with the responseArray
