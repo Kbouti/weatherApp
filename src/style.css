@@ -79,3 +79,7 @@ button:hover {
 .hidden{
     opacity:0;
 }
+
+#weatherBoard > div {
+    margin-bottom: .8rem;
+}
