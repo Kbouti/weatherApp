@@ -75,3 +75,7 @@ button:hover {
 #region{
     margin-right:4px;
 }
+
+.hidden{
+    opacity:0;
+}

@@ -4,6 +4,7 @@ import { updateBoard } from "./domManipulation";
 const form = document.getElementById(`form`);
 const unitButton = document.getElementById(`unitButton`);
 const cityInput = document.getElementById(`cityInput`);
+const weatherBoard = document.getElementById(`weatherBoard`);
 
 function testForm() {
   console.log(`form.js has loaded`);
@@ -49,15 +50,10 @@ async function formSubmit(e) {
    
     //Now we want to manipulate the Dom with the responseArray
 updateBoard(responseArray);
-
+weatherBoard.classList.remove(`hidden`);
   });
 }
 
-// ***************************************************************************************************************************************
-// Ok, now we've accessed the data. Now we need to do something with it. 
-// Get all the values we need and store them in an object, return the object. Then perform dom manipulation with object. 
-// Handle Errors... 
-// ***************************************************************************************************************************************
 
 
 function toggleUnits() {
