@@ -64,3 +64,9 @@ function toggleUnits() {
 }
 
 export { testForm, addFormListeners };
+
+
+// CSS isn't loading through gh pages site. I tried running the following, and made sure there's a style loader rule in webpack.config file:
+// npm install --save-dev style-loader css-loader
+
+// git subtree push --prefix dist origin-gh-pages
