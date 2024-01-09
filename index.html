@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Weather App</h1>
+    </div>
+
+    <form id="form">
+      <input
+        type="text"
+        name="city"
+        id="cityInput"
+        autocomplete="off"
+        placeholder="Enter a City"
+      />
+      <button type="button" id="unitButton" class="unitsToggle farenheit">
+        &#8457;
+      </button>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="weatherBoard" class="hidden">
+      <h2 id="cityName">city</h2>
+      <div class="regionContainer">
+        <div id="region">Region</div>
+        <div id="country">Country</div>
+      </div>
+      <div id="currentTemp">temp</div>
+      <div id="conditions">rain</div>
+      <div id="wind">wind</div>
+    </div>
+
+  </body>
+</html>
